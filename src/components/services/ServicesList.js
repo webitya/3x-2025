@@ -1,4 +1,4 @@
-import { FiCheckCircle, FiMail, FiPhone, FiSearch, FiTarget, FiUsers, FiBarChart } from "react-icons/fi"
+import { FiCheckCircle, FiMail, FiPhone, FiSearch, FiTarget, FiUsers, FiBarChart, FiArrowRight } from "react-icons/fi"
 
 export default function ServicesList() {
   const services = [
@@ -141,40 +141,71 @@ export default function ServicesList() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-black mb-4">How We Drive Your Growth</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Our proven methodology combines strategic planning with flawless execution to deliver measurable results for
+            your B2B marketing efforts.
+          </p>
+        </div>
+
+        <div className="space-y-24">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
             >
-              <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                <div className="bg-sky-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <service.icon className="h-8 w-8 text-sky-600" />
+              <div className={`${index % 2 === 1 ? "lg:col-start-2" : ""} animate-fade-in-up`}>
+                <div className="bg-gradient-to-br from-emerald-100 to-teal-100 w-20 h-20 rounded-2xl flex items-center justify-center mb-8 hover:from-emerald-200 hover:to-teal-200 transition-all duration-300 transform hover:scale-110 shadow-lg">
+                  <service.icon className="h-10 w-10 text-emerald-600" />
                 </div>
-                <h2 className="text-3xl font-bold text-black mb-2">{service.title}</h2>
-                <p className="text-sky-600 font-semibold mb-4">{service.subtitle}</p>
-                <p className="text-lg text-gray-600 mb-6">{service.description}</p>
+                <h2 className="text-4xl font-bold text-black mb-3">{service.title}</h2>
+                <div className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                  {service.subtitle}
+                </div>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">{service.description}</p>
 
-                <h3 className="text-xl font-semibold text-black mb-4">Key Features:</h3>
-                <ul className="space-y-2 mb-6">
+                <h3 className="text-2xl font-semibold text-black mb-6 flex items-center">
+                  <span className="w-1 h-8 bg-gradient-to-b from-emerald-600 to-teal-600 rounded-full mr-3"></span>
+                  Key Features
+                </h3>
+                <ul className="space-y-3 mb-8">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <FiCheckCircle className="h-5 w-5 text-sky-600 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-600">{feature}</span>
+                    <li key={featureIndex} className="flex items-start group">
+                      <div className="bg-emerald-100 rounded-full p-1 mr-4 mt-1 group-hover:bg-emerald-200 transition-colors duration-200">
+                        <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                      </div>
+                      <span className="text-gray-600 group-hover:text-gray-800 transition-colors duration-200">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
+
+                <button className="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 transition-colors duration-200 group">
+                  Learn More About This Service
+                  <FiArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                </button>
               </div>
 
-              <div className={`bg-gray-50 p-8 rounded-lg ${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}`}>
-                <h3 className="text-xl font-semibold text-black mb-4">Our Process:</h3>
-                <div className="space-y-4">
+              <div
+                className={`bg-gradient-to-br from-gray-50 to-white p-10 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 ${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""} animate-fade-in-up`}
+              >
+                <h3 className="text-2xl font-semibold text-black mb-8 flex items-center">
+                  <span className="w-2 h-8 bg-gradient-to-b from-emerald-600 to-teal-600 rounded-full mr-3"></span>
+                  Our Process
+                </h3>
+                <div className="space-y-6">
                   {service.process.map((step, stepIndex) => (
-                    <div key={stepIndex} className="flex items-start">
-                      <div className="bg-sky-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 text-sm font-bold flex-shrink-0">
+                    <div key={stepIndex} className="flex items-start group">
+                      <div className="bg-gradient-to-br from-emerald-600 to-teal-600 text-white w-10 h-10 rounded-full flex items-center justify-center mr-6 text-sm font-bold flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-200">
                         {stepIndex + 1}
                       </div>
-                      <p className="text-gray-600 pt-1">{step}</p>
+                      <div className="pt-2">
+                        <p className="text-gray-700 font-medium group-hover:text-black transition-colors duration-200">
+                          {step}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -183,76 +214,126 @@ export default function ServicesList() {
           ))}
         </div>
 
-        {/* Service Packages */}
-        <div className="mt-20 bg-sky-50 p-12 rounded-lg">
-          <h2 className="text-3xl font-bold text-black mb-8 text-center">Service Packages</h2>
+        <div className="mt-32 bg-gradient-to-br from-emerald-50 via-teal-50 to-white p-16 rounded-3xl shadow-xl border border-emerald-100">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-black mb-6">Choose Your Growth Path</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Select the perfect package to accelerate your B2B marketing success with our proven methodologies.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h3 className="text-2xl font-semibold text-black mb-4">Starter Package</h3>
-              <p className="text-gray-600 mb-6">Perfect for businesses just starting their B2B marketing journey.</p>
-              <ul className="space-y-2">
+            <div className="bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-black mb-4">Starter Package</h3>
+                <p className="text-gray-600 mb-6">Perfect for businesses just starting their B2B marketing journey.</p>
+                <div className="text-3xl font-bold text-emerald-600 mb-2">Free</div>
+                <p className="text-sm text-gray-500">Strategy Session</p>
+              </div>
+              <ul className="space-y-4 mb-8">
                 <li className="flex items-center">
-                  <FiCheckCircle className="h-5 w-5 text-sky-600 mr-2" />
+                  <div className="bg-emerald-100 rounded-full p-1 mr-3">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                  </div>
                   <span className="text-gray-600">Free strategic planning session</span>
                 </li>
                 <li className="flex items-center">
-                  <FiCheckCircle className="h-5 w-5 text-sky-600 mr-2" />
+                  <div className="bg-emerald-100 rounded-full p-1 mr-3">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                  </div>
                   <span className="text-gray-600">Basic market research</span>
                 </li>
                 <li className="flex items-center">
-                  <FiCheckCircle className="h-5 w-5 text-sky-600 mr-2" />
+                  <div className="bg-emerald-100 rounded-full p-1 mr-3">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                  </div>
                   <span className="text-gray-600">Shared resource access</span>
                 </li>
               </ul>
+              <button className="w-full border-2 border-emerald-600 text-emerald-600 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-all duration-300">
+                Get Started Free
+              </button>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-sm border-2 border-sky-600">
-              <div className="bg-sky-600 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                Most Popular
+            <div className="bg-white p-10 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-emerald-600 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                  Most Popular
+                </div>
               </div>
-              <h3 className="text-2xl font-semibold text-black mb-4">Growth Package</h3>
-              <p className="text-gray-600 mb-6">Comprehensive solution for scaling B2B marketing efforts.</p>
-              <ul className="space-y-2">
+              <div className="text-center mb-8 mt-4">
+                <h3 className="text-2xl font-bold text-black mb-4">Growth Package</h3>
+                <p className="text-gray-600 mb-6">Comprehensive solution for scaling B2B marketing efforts.</p>
+                <div className="text-3xl font-bold text-emerald-600 mb-2">Custom</div>
+                <p className="text-sm text-gray-500">Based on Requirements</p>
+              </div>
+              <ul className="space-y-4 mb-8">
                 <li className="flex items-center">
-                  <FiCheckCircle className="h-5 w-5 text-sky-600 mr-2" />
+                  <div className="bg-emerald-100 rounded-full p-1 mr-3">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                  </div>
                   <span className="text-gray-600">Complete strategic roadmap</span>
                 </li>
                 <li className="flex items-center">
-                  <FiCheckCircle className="h-5 w-5 text-sky-600 mr-2" />
+                  <div className="bg-emerald-100 rounded-full p-1 mr-3">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                  </div>
                   <span className="text-gray-600">Dedicated resource team</span>
                 </li>
                 <li className="flex items-center">
-                  <FiCheckCircle className="h-5 w-5 text-sky-600 mr-2" />
+                  <div className="bg-emerald-100 rounded-full p-1 mr-3">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                  </div>
                   <span className="text-gray-600">Full campaign execution</span>
                 </li>
                 <li className="flex items-center">
-                  <FiCheckCircle className="h-5 w-5 text-sky-600 mr-2" />
+                  <div className="bg-emerald-100 rounded-full p-1 mr-3">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                  </div>
                   <span className="text-gray-600">Performance optimization</span>
                 </li>
               </ul>
+              <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                Start Growing Now
+              </button>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h3 className="text-2xl font-semibold text-black mb-4">Enterprise Package</h3>
-              <p className="text-gray-600 mb-6">Full-scale marketing transformation for large organizations.</p>
-              <ul className="space-y-2">
+            <div className="bg-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-black mb-4">Enterprise Package</h3>
+                <p className="text-gray-600 mb-6">Full-scale marketing transformation for large organizations.</p>
+                <div className="text-3xl font-bold text-emerald-600 mb-2">Premium</div>
+                <p className="text-sm text-gray-500">Enterprise Solutions</p>
+              </div>
+              <ul className="space-y-4 mb-8">
                 <li className="flex items-center">
-                  <FiCheckCircle className="h-5 w-5 text-sky-600 mr-2" />
+                  <div className="bg-emerald-100 rounded-full p-1 mr-3">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                  </div>
                   <span className="text-gray-600">Custom strategic framework</span>
                 </li>
                 <li className="flex items-center">
-                  <FiCheckCircle className="h-5 w-5 text-sky-600 mr-2" />
+                  <div className="bg-emerald-100 rounded-full p-1 mr-3">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                  </div>
                   <span className="text-gray-600">Dedicated account management</span>
                 </li>
                 <li className="flex items-center">
-                  <FiCheckCircle className="h-5 w-5 text-sky-600 mr-2" />
+                  <div className="bg-emerald-100 rounded-full p-1 mr-3">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                  </div>
                   <span className="text-gray-600">Multi-channel execution</span>
                 </li>
                 <li className="flex items-center">
-                  <FiCheckCircle className="h-5 w-5 text-sky-600 mr-2" />
+                  <div className="bg-emerald-100 rounded-full p-1 mr-3">
+                    <FiCheckCircle className="h-4 w-4 text-emerald-600" />
+                  </div>
                   <span className="text-gray-600">Advanced analytics & reporting</span>
                 </li>
               </ul>
+              <button className="w-full border-2 border-emerald-600 text-emerald-600 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-all duration-300">
+                Contact Sales
+              </button>
             </div>
           </div>
         </div>
