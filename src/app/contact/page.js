@@ -12,7 +12,7 @@ export default function ContactPage() {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-black mb-4">Contact Us</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Ready to transform your B2B marketing? Let's discuss your growth strategy.
+              Ready to transform your B2B marketing? Let s discuss your growth strategy.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

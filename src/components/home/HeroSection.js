@@ -47,7 +47,7 @@ export default function HeroSection() {
             </p>
 
             <p className="text-lg text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Most companies don't fail at marketing because of effort—they fail because execution is fragmented,
+              Most companies don t fail at marketing because of effort—they fail because execution is fragmented,
               misaligned, and disconnected from sales. At 3xGrowth Consulting, we fix this broken link by building a
               marketing engine that delivers predictable sales outcomes.
             </p>

@@ -32,7 +32,7 @@ export default function AboutContent() {
           <div className="max-w-5xl mx-auto">
             <div className="bg-gradient-to-r from-emerald-50 to-teal-50 p-10 rounded-2xl mb-8 animate-fade-in-up animation-delay-200">
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                At 3xGrowth Consulting, we've identified the core problem plaguing B2B marketing: the
+                At 3xGrowth Consulting, we ve identified the core problem plaguing B2B marketing: the
                 <span className="font-semibold text-emerald-600">
                   {" "}
                   disconnect between marketing activities and sales outcomes
@@ -46,7 +46,7 @@ export default function AboutContent() {
                 allocation decision is made with one question in mind:
                 <span className="font-semibold text-emerald-600">
                   {" "}
-                  "How does this contribute to measurable sales outcomes?"
+                  How does this contribute to measurable sales outcomes?
                 </span>
               </p>
             </div>
@@ -101,7 +101,7 @@ export default function AboutContent() {
               <h3 className="text-4xl font-bold text-black mb-8">Execution Excellence</h3>
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                 Where we create real impact is in{" "}
-                <span className="font-semibold text-emerald-600">execution excellence</span>. We don't just provide
+                <span className="font-semibold text-emerald-600">execution excellence</span>. We don t just provide
                 resources; we bring project management discipline, research depth, and content strategy
                 precision—ensuring every initiative translates into measurable sales outcomes.
               </p>

@@ -15,7 +15,7 @@ export default function AboutHero() {
               Consulting
             </h1>
             <p className="text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-              We believe B2B lead generation is not just about campaigns—it's about building a
+              We believe B2B lead generation is not just about campaigns it s about building a
               <span className="text-emerald-600 font-semibold"> high-performance marketing engine</span> that directly
               aligns with sales outcomes.
             </p>

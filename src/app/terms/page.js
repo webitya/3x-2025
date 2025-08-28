@@ -17,7 +17,7 @@ export default function TermsPage() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Agreement to Terms</h2>
             <p className="text-gray-700 mb-4">
-              By accessing and using 3xGrowth Consulting's website and services, you accept and agree to be bound by the
+              By accessing and using 3xGrowth Consulting s website and services, you accept and agree to be bound by the
               terms and provision of this agreement. If you do not agree to abide by the above, please do not use this
               service.
             </p>

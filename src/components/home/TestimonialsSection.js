@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-700 mb-4">What Our Clients Say</h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders say about working with 3xGrowth Consulting.
+            Don t just take our word for it. Here s what industry leaders say about working with 3xGrowth Consulting.
           </p>
         </div>
 
@@ -68,7 +68,7 @@ export default function TestimonialsSection() {
               </div>
 
               <blockquote className="text-xl md:text-2xl text-slate-700 mb-8 leading-relaxed italic">
-                "{testimonials[currentIndex].text}"
+                {testimonials[currentIndex].text}
               </blockquote>
 
               <div className="flex items-center justify-center space-x-4">
