@@ -55,7 +55,7 @@ export default function ContactForm() {
       {status === "success" && (
         <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 flex items-center">
           <FiCheckCircle className="h-5 w-5 text-green-600 mr-2" />
-          <span className="text-green-700">Thank you! We'll be in touch within 24 hours.</span>
+          <span className="text-green-700">Thank you! We ll be in touch within 24 hours.</span>
         </div>
       )}
 

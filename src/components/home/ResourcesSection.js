@@ -7,7 +7,7 @@ export default function ResourcesSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-black mb-6">Managed Resources That Deliver</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We don't just hand over ideas—we provide the right people, guided by strategy, working under a structured
+            We do not just hand over ideas—we provide the right people, guided by strategy, working under a structured
             growth framework.
           </p>
         </div>

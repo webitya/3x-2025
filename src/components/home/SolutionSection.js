@@ -7,7 +7,7 @@ export default function SolutionSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-black mb-6">Our Solution: Clarity & Accountability</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We bring structure and transparency into B2B lead generation, giving leaders what they've been missing.
+            We bring structure and transparency into B2B lead generation, giving leaders what they have been missing.
           </p>
         </div>
 

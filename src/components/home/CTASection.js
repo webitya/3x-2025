@@ -8,7 +8,7 @@ export default function CTASection() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Fix the Broken Link in Your Growth?</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            This isn't outsourcing. This is building your growth capability with precision, discipline, and results.
+            This is not outsourcing. This is building your growth capability with precision, discipline, and results.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export default function CTASection() {
         </div>
 
         <div className="text-center">
-          <p className="text-lg text-gray-300 mb-8">Let's build your roadmap—at no cost.</p>
+          <p className="text-lg text-gray-300 mb-8">Let s build your roadmap—at no cost.</p>
           <Link
             href="/contact"
             className="bg-sky-600 text-white px-8 py-4 rounded-lg hover:bg-sky-700 font-semibold text-lg transition-colors inline-flex items-center"

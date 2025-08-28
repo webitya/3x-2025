@@ -73,7 +73,7 @@ export default function CaseStudyList() {
             </div>
 
             <div className="mt-6 pt-6 border-t border-gray-100">
-              <blockquote className="text-lg text-gray-700 italic">"{study.testimonial}"</blockquote>
+              <blockquote className="text-lg text-gray-700 italic">{study.testimonial}</blockquote>
               <cite className="text-sky-600 font-medium mt-2 block">
                 — {study.clientName}, {study.clientTitle}
               </cite>

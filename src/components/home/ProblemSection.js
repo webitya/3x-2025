@@ -15,7 +15,7 @@ export default function ProblemSection() {
           <div className="bg-gray-50 p-8 rounded-lg text-center">
             <FiBarChart className="h-12 w-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-black mb-4">
-              "Why do our campaigns look busy but not translate into pipeline?"
+              Why do our campaigns look busy but not translate into pipeline?
             </h3>
             <p className="text-gray-600">
               Marketing activities without clear connection to sales outcomes create the illusion of progress.
@@ -25,17 +25,17 @@ export default function ProblemSection() {
           <div className="bg-gray-50 p-8 rounded-lg text-center">
             <FiAlertCircle className="h-12 w-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-black mb-4">
-              "Why do agencies focus on vanity metrics instead of sales outcomes?"
+              Why do agencies focus on vanity metrics instead of sales outcomes?
             </h3>
             <p className="text-gray-600">
-              Disconnected execution leads to impressive reports that don't drive revenue growth.
+              Disconnected execution leads to impressive reports that do not drive revenue growth.
             </p>
           </div>
 
           <div className="bg-gray-50 p-8 rounded-lg text-center">
             <FiUsers className="h-12 w-12 text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-black mb-4">
-              "Why does execution always feel chaotic, without clarity or accountability?"
+              Why does execution always feel chaotic, without clarity or accountability?
             </h3>
             <p className="text-gray-600">
               Scattered teams and fragmented processes create confusion instead of results.
