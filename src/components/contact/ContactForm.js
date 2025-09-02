@@ -27,21 +27,18 @@ export default function ContactForm() {
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       })
 
       const result = await response.json()
-
       if (result.success) {
         setStatus("success")
         setFormData({ name: "", email: "", company: "", message: "" })
       } else {
         setStatus("error")
       }
-    } catch (error) {
+    } catch {
       setStatus("error")
     } finally {
       setIsSubmitting(false)
@@ -49,91 +46,74 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-      <h2 className="text-2xl font-bold text-black mb-6">Get Your Free Strategy Session</h2>
+    <div className="bg-white/80 backdrop-blur-md p-6 sm:p-8 rounded-2xl shadow-lg border border-sky-100  mx-auto">
+      <h2 className="text-2xl sm:text-3xl font-bold text-sky-900 mb-4">Get Your Free Strategy Session</h2>
+      <p className="text-gray-600 mb-6 text-sm sm:text-base">
+        Fill in the details below and our team will reach out within 24 hours.
+      </p>
 
       {status === "success" && (
-        <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 flex items-center">
+        <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 flex items-center text-sm">
           <FiCheckCircle className="h-5 w-5 text-green-600 mr-2" />
-          <span className="text-green-700">Thank you! We ll be in touch within 24 hours.</span>
+          <span className="text-green-700">Thank you! We’ll be in touch soon.</span>
         </div>
       )}
 
       {status === "error" && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 flex items-center">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 flex items-center text-sm">
           <FiAlertCircle className="h-5 w-5 text-red-600 mr-2" />
           <span className="text-red-700">Something went wrong. Please try again.</span>
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
-            Full Name *
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-600 focus:border-transparent outline-none transition-colors"
-            placeholder="Enter your full name"
-          />
-        </div>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          value={formData.name}
+          onChange={handleChange}
+          placeholder="Full Name *"
+          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition bg-white"
+        />
 
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
-            Email Address *
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-600 focus:border-transparent outline-none transition-colors"
-            placeholder="Enter your email address"
-          />
-        </div>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Email Address *"
+          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition bg-white"
+        />
 
-        <div>
-          <label htmlFor="company" className="block text-sm font-medium text-black mb-2">
-            Company Name
-          </label>
-          <input
-            type="text"
-            id="company"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-600 focus:border-transparent outline-none transition-colors"
-            placeholder="Enter your company name"
-          />
-        </div>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          value={formData.company}
+          onChange={handleChange}
+          placeholder="Company Name"
+          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition bg-white"
+        />
 
-        <div>
-          <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
-            Tell us about your marketing challenges *
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            rows={5}
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-600 focus:border-transparent outline-none transition-colors resize-vertical"
-            placeholder="Describe your current marketing challenges and goals..."
-          />
-        </div>
+        <textarea
+          id="message"
+          name="message"
+          required
+          rows={4}
+          value={formData.message}
+          onChange={handleChange}
+          placeholder="Tell us about your marketing challenges *"
+          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition bg-white resize-y"
+        />
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-sky-600 text-white px-6 py-4 rounded-lg hover:bg-sky-700 font-semibold text-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          className="w-full bg-sky-600 text-white px-6 py-3 rounded-lg hover:bg-sky-700 font-semibold text-base transition flex items-center justify-center shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             <>

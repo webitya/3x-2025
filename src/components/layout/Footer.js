@@ -39,20 +39,20 @@ export default function Footer() {
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/3 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500/3 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-blue-500/5"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info - Column 1 */}
           <div className="space-y-6">
             <div className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-lg flex items-center justify-center mr-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-blue-400 rounded-lg flex items-center justify-center mr-3">
                 <span className="text-white font-bold text-lg">3x</span>
               </div>
               <div>
-                <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+                <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-blue-400 bg-clip-text text-transparent">
                   3xGrowth
                 </span>
                 <div className="text-sm text-gray-300">Consulting</div>
@@ -63,20 +63,20 @@ export default function Footer() {
             </p>
             <div className="space-y-3">
               <div className="flex items-center text-gray-300 text-sm group">
-                <div className="w-8 h-8 bg-emerald-500/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-emerald-500/20 transition-colors">
-                  <FiMail className="h-4 w-4 text-emerald-400" />
+                <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-500/20 transition-colors">
+                  <FiMail className="h-4 w-4 text-blue-400" />
                 </div>
                 <span>info@3xgrowth.com</span>
               </div>
               <div className="flex items-center text-gray-300 text-sm group">
-                <div className="w-8 h-8 bg-emerald-500/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-emerald-500/20 transition-colors">
-                  <FiPhone className="h-4 w-4 text-emerald-400" />
+                <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-500/20 transition-colors">
+                  <FiPhone className="h-4 w-4 text-blue-400" />
                 </div>
                 <span>+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center text-gray-300 text-sm group">
-                <div className="w-8 h-8 bg-emerald-500/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-emerald-500/20 transition-colors">
-                  <FiMapPin className="h-4 w-4 text-emerald-400" />
+                <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-500/20 transition-colors">
+                  <FiMapPin className="h-4 w-4 text-blue-400" />
                 </div>
                 <span>New York, NY</span>
               </div>
@@ -96,7 +96,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-emerald-400 transition-colors text-sm flex items-center group"
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm flex items-center group"
                   >
                     <FiArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.label}
@@ -118,7 +118,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-emerald-400 transition-colors text-sm flex items-center group"
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm flex items-center group"
                   >
                     <FiArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.label}
@@ -143,14 +143,14 @@ export default function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address"
                   required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400/50 focus:border-emerald-400/50 transition-all backdrop-blur-sm"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 transition-all backdrop-blur-sm"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 disabled:from-gray-600 disabled:to-gray-600 text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-emerald-500/25"
+                className="w-full px-4 py-3 bg-gradient-to-r from-blue-500 to-blue-500 hover:from-blue-600 hover:to-blue-600 disabled:from-gray-600 disabled:to-gray-600 text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-blue-500/25"
               >
                 {isSubmitting ? (
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -167,7 +167,7 @@ export default function Footer() {
               <div
                 className={`p-3 rounded-lg text-sm ${
                   message.includes("Thank you")
-                    ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
+                    ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
                     : "bg-red-500/10 text-red-400 border border-red-500/20"
                 }`}
               >
@@ -182,11 +182,11 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">© 2025 3xGrowth Consulting. All rights reserved.</p>
             <div className="flex items-center gap-4 text-sm text-gray-400">
-              <Link href="/privacy" className="hover:text-emerald-400 transition-colors">
+              <Link href="/privacy" className="hover:text-blue-400 transition-colors">
                 Privacy Policy
               </Link>
               <span>•</span>
-              <Link href="/terms" className="hover:text-emerald-400 transition-colors">
+              <Link href="/terms" className="hover:text-blue-400 transition-colors">
                 Terms of Service
               </Link>
             </div>

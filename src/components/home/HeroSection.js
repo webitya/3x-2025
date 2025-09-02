@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { FiArrowRight, FiTarget, FiTrendingUp, FiPlay } from "react-icons/fi"
 
 export default function HeroSection() {
@@ -11,105 +12,92 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative bg-gradient-to-br from-emerald-50 via-white to-teal-50 py-20 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-emerald-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div
-          className="absolute top-40 right-10 w-72 h-72 bg-teal-600 rounded-full mix-blend-multiply filter blur-xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute bottom-10 left-1/2 w-72 h-72 bg-emerald-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"
-          style={{ animationDelay: "4s" }}
-        ></div>
+    <section className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background Blobs */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-20 left-10 w-40 h-40 md:w-56 md:h-56 bg-blue-500 rounded-full mix-blend-multiply filter blur-2xl"></div>
+        <div className="absolute bottom-20 right-10 w-48 h-48 md:w-64 md:h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-2xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          {/* Left Content */}
           <div
-            className={`transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-10"}`}
+            className={`transition-all duration-700 ${
+              isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
+            }`}
           >
-            <div className="inline-flex items-center bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-emerald-600 rounded-full mr-2 animate-pulse"></span>
+            <div className="inline-flex items-center bg-white/30 backdrop-blur-md border border-white/40 text-blue-700 px-3 py-1 rounded-full text-xs font-medium mb-4 shadow-sm">
+              <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
               Trusted by 150+ B2B Companies
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-slate-800 mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-800 mb-4 leading-snug">
               B2B Lead Generation
-              <span className="block bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                That Finally Works
+              <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                That Works
               </span>
             </h1>
 
-            <p className="text-2xl text-emerald-600 mb-4 max-w-3xl mx-auto font-semibold">
-              Clarity. Accountability. Measurable Growth.
+            <p className="text-base md:text-lg text-slate-600 mb-6 max-w-md">
+              Most companies don’t fail at marketing because of effort—they fail because execution is fragmented and
+              disconnected from sales. We fix this by building a marketing engine that drives predictable growth.
             </p>
 
-            <p className="text-lg text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Most companies don t fail at marketing because of effort—they fail because execution is fragmented,
-              misaligned, and disconnected from sales. At 3xGrowth Consulting, we fix this broken link by building a
-              marketing engine that delivers predictable sales outcomes.
-            </p>
-          </div>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 mb-8">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-indigo-700 font-medium text-sm transition-all duration-300 inline-flex items-center justify-center shadow-md hover:shadow-lg"
+              >
+                Book Free Session
+                <FiArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+              <Link
+                href="/services"
+                className="border border-blue-600 text-blue-600 px-6 py-3 rounded-xl hover:bg-blue-50 font-medium text-sm transition-all duration-300 inline-flex items-center justify-center shadow-sm hover:shadow-md"
+              >
+                <FiPlay className="mr-2 h-4 w-4" />
+                Our Services
+              </Link>
+            </div>
 
-          <div
-            className={`flex flex-col sm:flex-row gap-4 justify-center mb-12 transition-all duration-1000 delay-300 ${isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-10"}`}
-          >
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-xl hover:from-emerald-700 hover:to-teal-700 font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 animate-pulse-glow"
-            >
-              Book Free Strategy Session
-              <FiArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-emerald-600 text-emerald-600 px-8 py-4 rounded-xl hover:bg-emerald-50 font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              <FiPlay className="mr-2 h-5 w-5" />
-              View Our Services
-            </Link>
-          </div>
-
-          {/* Key Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            {[
-              {
-                icon: FiTarget,
-                title: "Strategic Clarity",
-                description:
-                  "Custom marketing plans aligned with your sales targets, breaking down every action item clearly.",
-                delay: "delay-500",
-              },
-              {
-                icon: FiTrendingUp,
-                title: "Zero-Risk Engagement",
-                description:
-                  "See the complete roadmap upfront. Only then decide whether to execute with your team or ours.",
-                delay: "delay-700",
-              },
-              {
-                icon: FiArrowRight,
-                title: "Execution Excellence",
-                description: "Turn your plan into a measurable growth engine with our managed resource services.",
-                delay: "delay-900",
-              },
-            ].map((benefit, index) => {
-              const Icon = benefit.icon
-              return (
-                <div
-                  key={index}
-                  className={`text-center p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 ${benefit.delay} ${isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-10"}`}
-                >
-                  <div className="bg-gradient-to-r from-emerald-100 to-teal-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-md">
-                    <Icon className="h-8 w-8 text-emerald-600" />
+            {/* Benefits */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {[
+                { icon: FiTarget, title: "Clarity" },
+                { icon: FiTrendingUp, title: "Zero-Risk" },
+                { icon: FiArrowRight, title: "Execution" },
+              ].map((benefit, index) => {
+                const Icon = benefit.icon
+                return (
+                  <div
+                    key={index}
+                    className="p-4 bg-white/40 backdrop-blur-md border border-white/50 rounded-xl shadow-sm text-center"
+                  >
+                    <Icon className="h-5 w-5 text-blue-600 mx-auto mb-2" />
+                    <h3 className="text-sm font-semibold text-slate-700">{benefit.title}</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-700 mb-3">{benefit.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{benefit.description}</p>
-                </div>
-              )
-            })}
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Right Image Compact Square with px */}
+          <div
+            className={`relative transition-all duration-700 delay-200 ${
+              isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <div className="relative mx-auto w-[300px] h-[300px] md:w-[340px] md:h-[340px] rounded-2xl overflow-hidden shadow-xl border border-white/30 bg-white/10 backdrop-blur-lg">
+              <Image
+                src="/hero.jpeg" // Replace with your image
+                alt="B2B Growth"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
           </div>
         </div>
       </div>

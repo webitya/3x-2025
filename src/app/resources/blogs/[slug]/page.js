@@ -50,40 +50,46 @@ export default function BlogPost({ params }) {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-50">
       <Header />
       <main className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back button */}
           <Link
             href="/resources/blogs"
-            className="inline-flex items-center text-emerald-600 hover:text-emerald-700 mb-8 transition-colors duration-200"
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8 transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Blog
           </Link>
 
+          {/* Blog header */}
           <header className="mb-12">
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
               <div className="flex items-center">
-                <User className="w-4 h-4 mr-1" />
+                <User className="w-4 h-4 mr-1 text-blue-500" />
                 {blog.author}
               </div>
               <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-1" />
+                <Clock className="w-4 h-4 mr-1 text-blue-500" />
                 {blog.readTime}
               </div>
               <span>{blog.date}</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-black mb-6 leading-tight">{blog.title}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              {blog.title}
+            </h1>
 
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">{blog.excerpt}</p>
+            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+              {blog.excerpt}
+            </p>
 
             <div className="flex flex-wrap gap-2">
               {blog.tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-emerald-100 text-emerald-700"
+                  className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-700"
                 >
                   <Tag className="w-3 h-3 mr-1" />
                   {tag}
@@ -92,6 +98,7 @@ export default function BlogPost({ params }) {
             </div>
           </header>
 
+          {/* Blog content */}
           <article className="prose prose-lg max-w-none">
             <div className="text-gray-700 leading-relaxed space-y-6">
               {blog.content.split("\n\n").map((paragraph, index) => (
@@ -102,23 +109,27 @@ export default function BlogPost({ params }) {
             </div>
           </article>
 
-          <div className="mt-16 p-8 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl border border-emerald-100">
+          {/* CTA Section */}
+          <div className="mt-16 p-8 bg-gradient-to-r from-blue-600 to-blue-500 rounded-2xl shadow-lg text-white">
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-black mb-4">Ready to Transform Your B2B Marketing?</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-bold mb-4">
+                Ready to Transform Your B2B Marketing?
+              </h3>
+              <p className="mb-6 text-blue-100">
                 Get your free marketing plan and discover how we can help you achieve measurable growth.
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors duration-200"
+                className="inline-block bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
               >
                 Get Your Free Plan
               </Link>
             </div>
           </div>
 
+          {/* Related Articles */}
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-black mb-8">Related Articles</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>
             <div className="grid md:grid-cols-2 gap-8">
               {blogData
                 .filter((post) => post.slug !== blog.slug)
@@ -127,9 +138,9 @@ export default function BlogPost({ params }) {
                   <Link
                     key={relatedPost.id}
                     href={`/resources/blogs/${relatedPost.slug}`}
-                    className="block p-6 bg-white rounded-xl border border-gray-200 hover:border-emerald-300 hover:shadow-lg transition-all duration-200"
+                    className="block p-6 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-200"
                   >
-                    <h4 className="text-xl font-semibold text-black mb-3 hover:text-emerald-600 transition-colors">
+                    <h4 className="text-xl font-semibold text-gray-900 mb-3 hover:text-blue-600 transition-colors">
                       {relatedPost.title}
                     </h4>
                     <p className="text-gray-600 mb-4">{relatedPost.excerpt}</p>
