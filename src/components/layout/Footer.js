@@ -66,19 +66,19 @@ export default function Footer() {
                 <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-500/20 transition-colors">
                   <FiMail className="h-4 w-4 text-blue-400" />
                 </div>
-                <span>info@3xgrowth.com</span>
+                <span>sandeep@3xgrowth.in</span>
               </div>
               <div className="flex items-center text-gray-300 text-sm group">
                 <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-500/20 transition-colors">
                   <FiPhone className="h-4 w-4 text-blue-400" />
                 </div>
-                <span>+1 (555) 123-4567</span>
+                <span>+91 6200207379</span>
               </div>
               <div className="flex items-center text-gray-300 text-sm group">
                 <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-500/20 transition-colors">
                   <FiMapPin className="h-4 w-4 text-blue-400" />
                 </div>
-                <span>New York, NY</span>
+                <span>D Block, Jayshree Green City, Argora, Ranchi, jharkhand India</span>
               </div>
             </div>
           </div>
@@ -180,7 +180,7 @@ export default function Footer() {
         <div className="relative mt-12 pt-8">
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">© 2025 3xGrowth Consulting. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">© 2025 3xGrowth. All rights reserved.</p>
             <div className="flex items-center gap-4 text-sm text-gray-400">
               <Link href="/privacy" className="hover:text-blue-400 transition-colors">
                 Privacy Policy

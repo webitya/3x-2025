@@ -1,5 +1,4 @@
-// data/services.js
-import { FiCheckCircle, FiMail, FiPhone, FiSearch, FiTarget, FiUsers, FiBarChart } from "react-icons/fi"
+import { FiTarget, FiPhone, FiSearch, FiUsers } from "react-icons/fi"
 
 export const services = [
   {
@@ -22,29 +21,6 @@ export const services = [
       "Market analysis and competitor research",
       "Strategy development and documentation",
       "Plan presentation and Q&A session",
-    ],
-  },
-  {
-    icon: FiMail,
-    title: "Email Marketing & ABM",
-    subtitle: "Managed Resources",
-    description:
-      "Dedicated email marketing teams that execute strategic campaigns with precision and accountability.",
-    features: [
-      "Email campaign strategy and execution",
-      "Account-based marketing campaigns",
-      "Content research and creation",
-      "List building and segmentation",
-      "A/B testing and optimization",
-      "Performance tracking and reporting",
-      "CRM integration and management",
-    ],
-    process: [
-      "Campaign strategy development",
-      "Content creation and approval",
-      "List preparation and segmentation",
-      "Campaign execution and monitoring",
-      "Performance analysis and optimization",
     ],
   },
   {
@@ -74,7 +50,8 @@ export const services = [
     icon: FiSearch,
     title: "Market Research & Intelligence",
     subtitle: "Strategic Insights",
-    description: "Comprehensive market research that provides the foundation for all your marketing decisions.",
+    description:
+      "Comprehensive market research that provides the foundation for all your marketing decisions.",
     features: [
       "Ideal Customer Profile (ICP) definition",
       "Competitor analysis and benchmarking",
@@ -94,46 +71,67 @@ export const services = [
   },
   {
     icon: FiUsers,
-    title: "Resource Management",
-    subtitle: "Flexible Solutions",
-    description: "Choose between shared or dedicated resources, all working under our structured growth framework.",
-    features: [
-      "Shared resource access",
-      "Dedicated team allocation",
-      "Project management oversight",
-      "Quality assurance processes",
-      "Performance monitoring",
-      "Scalable resource models",
-      "Transparent reporting",
-    ],
-    process: [
-      "Resource requirement assessment",
-      "Team allocation and onboarding",
-      "Project setup and planning",
-      "Ongoing management and optimization",
-      "Performance review and scaling",
-    ],
+    title: "Buying Intent Verification – Intent IQ",
+    subtitle: "Intent-based Research",
+    description: `
+      A. Manual Research
+      1. Funding Signals
+      - Recent VC/PE rounds, angel investments, or government grants.
+      - Expansion announcements (press releases, news portals).
+      2. Job Postings
+      - Hiring sales, marketing, or tech roles = budget + expansion.
+      - Senior hires = strategic shift.
+      3. Operational / Process Complexity Signals
+      - Rapid increase in SKUs, multiple service lines, or entering new markets.
+      - Complex client onboarding (visible from case studies/testimonials).
+      - Productivity analysis by analysing costs
+      4. Social Engagement
+      - Decision-makers engaging with competitor or solution-related content.
+      - Liking/commenting on pain-point discussions.
+      5. Company Talking About Pain Points
+      - Leadership or employees openly discussing challenges in posts/comments.
+      - Mentions in forums, industry groups, or press interviews.
+      6. Attrition Signals
+      - High churn in sales/marketing team (LinkedIn job changes).
+      - Leadership exits = opportunity for new solutions.
+      7. Growth Trends (3 Years)
+      - Revenue growth trajectory, employee headcount, leadership behavior.
+      8. Budget Analysis & Experiment Signals
+      - Sponsoring events, ads, new tools adoption.
+
+      B. Advanced Intent Verification – Outbound Touch Points
+      Objective: Not to “sell” → but to validate buying intent through insight-driven outreach.
+      - Light-Touch Email Campaigns (1–2 per month)
+      - Intent Validation via Content Engagement
+      - Micro-Surveys / Polls
+      - Low-Touch Verification Calls
+      Why This Matters:
+      - Separates real-time buyers from good-fit accounts.
+      - Builds evidence-based confidence.
+      - Establishes channel credibility over 2–4 months.
+    `,
   },
   {
-    icon: FiBarChart,
-    title: "Performance Optimization",
-    subtitle: "Continuous Improvement",
-    description: "Ongoing optimization of all marketing activities to ensure maximum ROI and sales impact.",
+    icon: FiUsers,
+    title: "Data Research & List Building",
+    subtitle: "Accurate & Actionable Leads",
+    description:
+      "We deliver targeted prospect databases with verified information to power your outreach campaigns.",
     features: [
-      "Performance tracking and analysis",
-      "ROI measurement and reporting",
-      "Campaign optimization",
-      "Process improvement",
-      "Technology integration",
-      "Data-driven decision making",
-      "Continuous testing and refinement",
+      "Industry & geography-based targeting",
+      "Decision-maker identification (CXO, VP, Directors)",
+      "Verified email & phone numbers",
+      "LinkedIn profiles & social intelligence",
+      "Custom segmentation by company size, funding, and tech stack",
+      "Bounce-free data delivery",
+      "Regular database refresh",
     ],
     process: [
-      "Baseline performance establishment",
-      "Key metrics identification",
-      "Regular performance reviews",
-      "Optimization implementation",
-      "Results measurement and reporting",
+      "Define ICP and segmentation criteria",
+      "Research through verified sources (LinkedIn, Crunchbase, Zoominfo)",
+      "Multi-step verification (email, phone, LinkedIn)",
+      "Deliver enriched lead list in Excel/CRM",
+      "Ongoing data refresh & hygiene",
     ],
   },
 ]

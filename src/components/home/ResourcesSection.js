@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { FiMail, FiPhone, FiSearch, FiUsers } from "react-icons/fi"
 
 export default function ResourcesSection() {
@@ -22,19 +23,21 @@ export default function ResourcesSection() {
             <div className="bg-sky-100 w-14 h-14 rounded-xl flex items-center justify-center mb-5">
               <FiMail className="h-7 w-7 text-sky-600" />
             </div>
-            <h3 className="text-xl font-semibold text-sky-900 mb-3">Email Marketing & ABM</h3>
+            <h3 className="text-xl font-semibold text-sky-900 mb-3"> Buying Intent verification – Intent IQ</h3>
             <p className="text-gray-600 text-sm mb-4">
-              Dedicated email executives, project managers, content researchers, and creators working in sync.
+              We  help B2B companies separate “curious” prospects from “serious” buyers by validating the intent before the sales team invests time.
             </p>
             <ul className="text-gray-600 text-sm space-y-1 mb-5">
-              <li>• Campaign strategy & execution</li>
-              <li>• Account-based campaigns</li>
-              <li>• Content research & creation</li>
-              <li>• Performance tracking</li>
+              <li>• Mannual research layer </li>
+              <li>• Direct verification </li>
+              <li>• Better ROI on Marketing Spend</li>
+              <li>• Save Sales Time</li>
             </ul>
-            <button className="px-4 py-2 text-sm font-medium bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition">
-              Learn More
-            </button>
+             <Link href="/about">
+      <button className="px-4 py-2 text-sm font-medium bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition">
+        Learn More
+      </button>
+    </Link>
           </div>
 
           {/* Card 2 */}
@@ -52,9 +55,11 @@ export default function ResourcesSection() {
               <li>• Appointment scheduling</li>
               <li>• Follow-up management</li>
             </ul>
-            <button className="px-4 py-2 text-sm font-medium bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition">
-              Book a Call
-            </button>
+            <Link href="/about">
+      <button className="px-4 py-2 text-sm font-medium bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition">
+        Learn More
+      </button>
+    </Link>
           </div>
 
           {/* Card 3 */}
@@ -72,9 +77,11 @@ export default function ResourcesSection() {
               <li>• Customer surveys</li>
               <li>• Market opportunity analysis</li>
             </ul>
-            <button className="px-4 py-2 text-sm font-medium bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition">
-              Get Insights
-            </button>
+      <Link href="/about">
+      <button className="px-4 py-2 text-sm font-medium bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition">
+        Learn More
+      </button>
+    </Link>
           </div>
         </div>
 

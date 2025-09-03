@@ -9,10 +9,10 @@ export default function ContactInfo() {
         <h2 className="text-xl font-bold text-sky-900 mb-4">Get in Touch</h2>
         <div className="space-y-3 text-sm">
           {[
-            { icon: <FiMail className="h-5 w-5 text-sky-600" />, label: "Email", value: "info@3xgrowthconsulting.com" },
-            { icon: <FiPhone className="h-5 w-5 text-sky-600" />, label: "Phone", value: "+1 (555) 123-4567" },
-            { icon: <FiMapPin className="h-5 w-5 text-sky-600" />, label: "Location", value: "New York, NY" },
-            { icon: <FiClock className="h-5 w-5 text-sky-600" />, label: "Hours", value: "Mon-Fri: 9AM - 6PM EST" },
+            { icon: <FiMail className="h-5 w-5 text-sky-600" />, label: "Email", value: "sandeep@3xgrowth.in" },
+            { icon: <FiPhone className="h-5 w-5 text-sky-600" />, label: "Phone", value: "+91 6200207379" },
+            { icon: <FiMapPin className="h-5 w-5 text-sky-600" />, label: "Location", value: "D Block, Jayshree Green City, Argora, Ranchi, jharkhand India" },
+            { icon: <FiClock className="h-5 w-5 text-sky-600" />, label: "Hours", value: "Mon-Sat: 9AM - 6PM" },
           ].map((item, idx) => (
             <div key={idx} className="flex items-center gap-3">
               {item.icon}
