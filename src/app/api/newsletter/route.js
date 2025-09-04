@@ -5,19 +5,21 @@ export async function POST(request) {
     const { email } = await request.json()
 
     if (!email) {
-      return Response.json({ error: "Email is required" }, { status: 400 })
+      return new Response(JSON.stringify({ error: "Email is required" }), {
+        status: 400,
+      })
     }
 
     // Create transporter
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_APP_PASSWORD,
+        user: process.env.EMAIL_USER, // your Gmail
+        pass: process.env.EMAIL_APP_PASSWORD, // Gmail app password
       },
     })
 
-    // Send thank you email to subscriber
+    // Send thank-you email to subscriber
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
@@ -84,9 +86,13 @@ export async function POST(request) {
       `,
     })
 
-    return Response.json({ message: "Subscription successful" }, { status: 200 })
+    return new Response(JSON.stringify({ message: "Subscription successful" }), {
+      status: 200,
+    })
   } catch (error) {
     console.error("Newsletter subscription error:", error)
-    return Response.json({ error: "Failed to subscribe" }, { status: 500 })
+    return new Response(JSON.stringify({ error: "Failed to subscribe" }), {
+      status: 500,
+    })
   }
 }
