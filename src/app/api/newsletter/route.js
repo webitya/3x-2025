@@ -10,18 +10,18 @@ export async function POST(request) {
       })
     }
 
-    // Create transporter
+    // ✅ Use correct env variables
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER, // your Gmail
-        pass: process.env.EMAIL_APP_PASSWORD, // Gmail app password
+        user: process.env.GMAIL_USER,          // match .env.local
+        pass: process.env.GMAIL_APP_PASSWORD,  // match .env.local
       },
     })
 
     // Send thank-you email to subscriber
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: process.env.GMAIL_USER,
       to: email,
       subject: "Welcome to 3xGrowth Consulting Newsletter!",
       html: `
@@ -57,8 +57,8 @@ export async function POST(request) {
 
     // Send lead notification to admin
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+      from: process.env.GMAIL_USER,
+      to: process.env.GMAIL_USER,
       subject: "New Newsletter Subscription - 3xGrowth Consulting",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
