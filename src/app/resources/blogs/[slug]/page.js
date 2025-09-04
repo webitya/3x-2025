@@ -118,12 +118,12 @@ export default function BlogPost({ params }) {
               <p className="mb-6 text-blue-100">
                 Get your free marketing plan and discover how we can help you achieve measurable growth.
               </p>
-              <Link
-                href="/contact"
-                className="inline-block bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
-              >
-                Get Your Free Plan
-              </Link>
+            <Link
+  href="/schedule-meeting"
+  className="cursor-pointer inline-block bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
+>
+  Get Your Free Plan
+</Link>
             </div>
           </div>
 

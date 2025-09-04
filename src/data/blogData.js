@@ -20,7 +20,7 @@ export const blogData = [
       "Learn how to create a systematic approach to B2B marketing that delivers measurable sales outcomes through strategic clarity and execution excellence.",
     content:
       "Creating a marketing engine that drives sales requires more than just running campaigns. It demands a systematic approach that aligns every marketing activity with sales outcomes...",
-    author: "Michael Chen",
+    author: "Aditya Kumar",
     date: "January 10, 2025",
     tags: ["Marketing Strategy", "Sales Enablement", "Growth"],
     readTime: "12 min read",
@@ -33,7 +33,7 @@ export const blogData = [
       "Explore proven strategies for account-based email marketing that consistently deliver 3x returns through targeted messaging and strategic execution.",
     content:
       "Account-based marketing through email isn't just about sending personalized messages. It's about creating a systematic approach that identifies, engages, and converts high-value prospects...",
-    author: "Lisa Rodriguez",
+    author: "Aditya Kumar",
     date: "January 5, 2025",
     tags: ["Email Marketing", "ABM", "ROI"],
     readTime: "10 min read",
@@ -46,7 +46,7 @@ export const blogData = [
       "Modern lead qualification requires more than Budget, Authority, Need, and Timeline. Discover advanced frameworks that improve conversion rates by 40%.",
     content:
       "Traditional BANT qualification is outdated in today's complex B2B buying environment. Modern buyers involve multiple stakeholders, longer decision cycles, and complex evaluation processes...",
-    author: "David Park",
+    author: "Raj Jaiswal",
     date: "December 28, 2024",
     tags: ["Lead Generation", "Sales Process", "Qualification"],
     readTime: "9 min read",
@@ -59,7 +59,7 @@ export const blogData = [
       "Most companies think they know their ideal customer profile. Here's how to conduct research that reveals who actually buys and why they choose you.",
     content:
       "Creating an accurate Ideal Customer Profile goes beyond demographics and firmographics. It requires deep understanding of buying behaviors, decision-making processes, and value drivers...",
-    author: "Jennifer Kim",
+    author: "Karan Bhagat",
     date: "December 20, 2024",
     tags: ["Market Research", "ICP", "Customer Analysis"],
     readTime: "11 min read",
@@ -72,7 +72,7 @@ export const blogData = [
       "Transform your appointment setting approach with proven techniques that turn cold prospects into engaged conversations and qualified opportunities.",
     content:
       "Effective appointment setting is both an art and a science. It requires understanding prospect psychology, crafting compelling value propositions, and executing with precision...",
-    author: "Robert Thompson",
+    author: "Aditya Kumar",
     date: "December 15, 2024",
     tags: ["Appointment Setting", "Cold Outreach", "Sales Development"],
     readTime: "7 min read",

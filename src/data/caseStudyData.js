@@ -30,7 +30,7 @@ export const caseStudyData = [
     ],
     testimonial:
       "3xGrowth completely transformed our marketing approach. We went from scattered efforts to a systematic engine that delivers consistent results. The transparency and strategic clarity they provided was exactly what we needed.",
-    clientName: "Sarah Mitchell",
+    clientName: "Rajeev Gupta",
     clientTitle: "CEO, TechFlow Solutions",
   },
   {
@@ -64,7 +64,7 @@ export const caseStudyData = [
     ],
     testimonial:
       "The team at 3xGrowth understood our industry challenges and created a marketing strategy that actually works for manufacturing. Our sales team now focuses on qualified prospects instead of chasing unqualified leads.",
-    clientName: "Mark Johnson",
+    clientName: "Mukesh Kumar",
     clientTitle: "VP of Sales, Industrial Dynamics Corp",
   },
   {
@@ -98,7 +98,7 @@ export const caseStudyData = [
     ],
     testimonial:
       "3xGrowth helped us build a marketing and sales system that scales beyond the founder. We now have predictable lead flow and a systematic approach to closing enterprise deals.",
-    clientName: "Amanda Rodriguez",
+    clientName: "Harsh Jaiswal",
     clientTitle: "Managing Partner, Strategic Consulting Partners",
   },
 ]
