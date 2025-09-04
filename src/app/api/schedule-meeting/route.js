@@ -5,7 +5,7 @@ export async function POST(req) {
   try {
     const { name, company, phone, email, message } = await req.json()
 
-    // Nodemailer Transport
+    // Nodemailer Transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -14,7 +14,7 @@ export async function POST(req) {
       },
     })
 
-    // 📩 Admin Email
+    // 📩 Admin Notification
     await transporter.sendMail({
       from: `"Meeting Scheduler" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER,
@@ -40,11 +40,11 @@ export async function POST(req) {
       `,
     })
 
-    // 📩 User Thank You Email
+    // 📩 User Auto-Reply
     await transporter.sendMail({
-      from: `"Your Company" <${process.env.GMAIL_USER}>`,
+      from: `"3xGrowth.in" <${process.env.GMAIL_USER}>`,
       to: email,
-      subject: "✅ Thank you for contacting us!",
+      subject: "✅ Thank you for contacting 3xGrowth!",
       html: `
       <div style="font-family: Arial, sans-serif; background-color:#f4f7fb; padding:20px;">
         <div style="max-width:600px; margin:auto; background:#ffffff; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
@@ -63,7 +63,7 @@ export async function POST(req) {
             <p style="margin-top:20px;">If you have urgent queries, feel free to reply to this email.</p>
           </div>
           <div style="background:#eff6ff; padding:15px; text-align:center; font-size:14px; color:#444;">
-            <p>💙 Thank you for trusting <strong>Your Company</strong></p>
+            <p>💙 Thank you for trusting <strong>3xGrowth.in</strong></p>
           </div>
         </div>
       </div>

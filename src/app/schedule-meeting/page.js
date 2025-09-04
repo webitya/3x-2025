@@ -41,86 +41,118 @@ export default function ScheduleMeetingPage() {
   }
 
   return (
-<>
-<Header/>
+    <>
+      <Header />
 
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 px-4">
-      <div className="w-full max-w-lg bg-white shadow-xl rounded-2xl p-8">
-        <h1 className="text-3xl font-bold text-blue-700 mb-6 text-center">
-          Schedule a Meeting
-        </h1>
+      {/* Full-width Section */}
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 px-4 py-12">
+        <div className="w-full max-w-6xl grid md:grid-cols-2 gap-10">
+          {/* Left side - Form */}
+          <div>
+            <h1 className="text-3xl font-bold text-[#4348F9] mb-6">
+              Schedule a Meeting
+            </h1>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={form.name}
-            onChange={handleChange}
-            required
-            className="w-full p-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
-          />
-          <input
-            type="text"
-            name="company"
-            placeholder="Company Name"
-            value={form.company}
-            onChange={handleChange}
-            required
-            className="w-full p-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
-          />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            value={form.phone}
-            onChange={handleChange}
-            required
-            className="w-full p-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={form.email}
-            onChange={handleChange}
-            required
-            className="w-full p-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows="4"
-            value={form.message}
-            onChange={handleChange}
-            required
-            className="w-full p-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
-          />
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={form.name}
+                onChange={handleChange}
+                required
+                className="w-full p-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-[#4348F9] outline-none"
+              />
+              <input
+                type="text"
+                name="company"
+                placeholder="Company Name"
+                value={form.company}
+                onChange={handleChange}
+                required
+                className="w-full p-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-[#4348F9] outline-none"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={form.phone}
+                onChange={handleChange}
+                required
+                className="w-full p-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-[#4348F9] outline-none"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                value={form.email}
+                onChange={handleChange}
+                required
+                className="w-full p-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-[#4348F9] outline-none"
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="4"
+                value={form.message}
+                onChange={handleChange}
+                required
+                className="w-full p-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-[#4348F9] outline-none"
+              />
 
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-          >
-            {status === "loading" ? "Sending..." : "Submit"}
-          </button>
-        </form>
+              <button
+                type="submit"
+                className="w-full bg-[#4348F9] text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+              >
+                {status === "loading" ? "Sending..." : "Submit"}
+              </button>
+            </form>
 
-        {status === "success" && (
-          <p className="text-green-600 text-center mt-4">
-            ✅ Your meeting request has been sent!
-          </p>
-        )}
-        {status === "error" && (
-          <p className="text-red-600 text-center mt-4">
-            ❌ Something went wrong. Please try again.
-          </p>
-        )}
+            {status === "success" && (
+              <p className="text-green-600 text-center mt-4">
+                ✅ Your meeting request has been sent!
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-red-600 text-center mt-4">
+                ❌ Something went wrong. Please try again.
+              </p>
+            )}
+          </div>
+
+          {/* Right side - Info */}
+          <div className="flex flex-col justify-center text-gray-700 space-y-6">
+            <h2 className="text-2xl font-semibold text-[#4348F9]">
+              Why Schedule a Meeting with 3xGrowth?
+            </h2>
+            <p>
+              At <b>3xGrowth.in</b>, we help businesses accelerate growth by
+              providing tailored consulting, sales strategies, and digital
+              solutions. Booking a meeting with us means getting access to
+              insights that can transform your business.
+            </p>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-center gap-2">
+                <span className="text-[#4348F9]">✔</span> Personalized business
+                growth strategies
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-[#4348F9]">✔</span> Free initial consultation
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-[#4348F9]">✔</span> Expert advice from
+                experienced consultants
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-[#4348F9]">✔</span> Roadmap to scale your
+                company faster
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
 
-<Footer/>
-
-
-</>
+      <Footer />
+    </>
   )
 }
