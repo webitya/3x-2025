@@ -47,7 +47,7 @@ export default function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <Link
-                href="/contact"
+                href="https://calendly.com/salessyllabus" target="_blank"
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-indigo-700 font-medium text-sm transition-all duration-300 inline-flex items-center justify-center shadow-md hover:shadow-lg"
               >
                 Book Free Session
