@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 export default function ServicesHero() {
   return (
     <section className="bg-gradient-to-br from-blue-50 via-white to-blue-50 py-24 relative overflow-hidden">
@@ -31,12 +33,20 @@ export default function ServicesHero() {
 
           {/* CTA buttons */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delayed-2">
-            <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Get Free Strategy Session
-            </button>
-            <button className="border-2 border-blue-600 text-blue-700 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300">
-              View Case Studies
-            </button>
+         <Link
+  href="https://calendly.com/salessyllabus"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="cursor-pointer bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+    Get Free Strategy Session
+  </button>
+</Link>
+<Link href="/resources/case-studies">
+  <button className="cursor-pointer border-2 border-blue-600 text-blue-700 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300">
+    View Case Studies
+  </button>
+</Link>
           </div>
         </div>
       </div>
