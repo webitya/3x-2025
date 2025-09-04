@@ -47,8 +47,8 @@ export default function SolutionSection() {
                 </li>
               </ul>
             </div>
-          <Link href="/schedule-meeting">
-      <button className="mt-6 w-full bg-[#4348F9] hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+        <Link href="/schedule-meeting">
+      <button className="mt-6 w-full bg-[#4348F9] hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition cursor-pointer">
         Schedule Meeting
       </button>
     </Link>
@@ -84,8 +84,8 @@ export default function SolutionSection() {
                 </li>
               </ul>
             </div>
-         <Link href="/schedule-meeting">
-      <button className="mt-6 w-full bg-[#4348F9] hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+  <Link href="/schedule-meeting">
+      <button className="mt-6 w-full bg-[#4348F9] hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition cursor-pointer">
         Schedule Meeting
       </button>
     </Link>
@@ -121,8 +121,8 @@ export default function SolutionSection() {
                 </li>
               </ul>
             </div>
-          <Link href="/schedule-meeting">
-      <button className="mt-6 w-full bg-[#4348F9] hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+         <Link href="/schedule-meeting">
+      <button className="mt-6 w-full bg-[#4348F9] hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition cursor-pointer">
         Schedule Meeting
       </button>
     </Link>
