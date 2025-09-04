@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 
 
@@ -13,9 +14,11 @@ const AboutCTA=()=>{
     Build your growth capability with precision, clarity, and accountability. Ready to
     experience the difference?
   </p>
-  <button className="px-6 py-3 rounded-xl bg-white text-blue-600 font-semibold shadow-md hover:shadow-lg transition">
+<Link href="/schedule-meeting">
+  <button className="px-6 py-3 rounded-xl bg-white text-[#4348F9] font-semibold shadow-md hover:shadow-lg transition cursor-pointer">
     Start Your Growth Journey →
   </button>
+</Link>
 </section>
         </>
     )
