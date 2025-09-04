@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { FiCheckCircle, FiShield, FiSettings } from "react-icons/fi"
 
 export default function SolutionSection() {
@@ -46,9 +47,11 @@ export default function SolutionSection() {
                 </li>
               </ul>
             </div>
-            <button className="mt-6 w-full bg-sky-600 hover:bg-sky-700 text-white font-medium py-2 px-4 rounded-lg transition">
-              Schedule Meeting
-            </button>
+          <Link href="/schedule-meeting">
+      <button className="mt-6 w-full bg-[#4348F9] hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+        Schedule Meeting
+      </button>
+    </Link>
           </div>
 
           {/* Card 2 */}
@@ -81,9 +84,11 @@ export default function SolutionSection() {
                 </li>
               </ul>
             </div>
-            <button className="mt-6 w-full bg-sky-600 hover:bg-sky-700 text-white font-medium py-2 px-4 rounded-lg transition">
-              Schedule Meeting
-            </button>
+         <Link href="/schedule-meeting">
+      <button className="mt-6 w-full bg-[#4348F9] hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+        Schedule Meeting
+      </button>
+    </Link>
           </div>
 
           {/* Card 3 */}
@@ -116,9 +121,11 @@ export default function SolutionSection() {
                 </li>
               </ul>
             </div>
-            <button className="mt-6 w-full bg-sky-600 hover:bg-sky-700 text-white font-medium py-2 px-4 rounded-lg transition">
-              Schedule Meeting
-            </button>
+          <Link href="/schedule-meeting">
+      <button className="mt-6 w-full bg-[#4348F9] hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+        Schedule Meeting
+      </button>
+    </Link>
           </div>
         </div>
       </div>
