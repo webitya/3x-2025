@@ -7,7 +7,7 @@ export const blogData = [
       "Discover why 73% of B2B companies struggle with disconnected marketing efforts and how to fix the broken link between campaigns and sales outcomes.",
     content:
       "Most B2B companies invest heavily in marketing activities that look impressive on paper but fail to generate predictable revenue growth. The problem isn't effort—it's fragmentation...",
-    author: "Sarah Johnson",
+    author: "Harsh Kumar",
     date: "January 15, 2025",
     tags: ["B2B Marketing", "Strategy", "Sales Alignment"],
     readTime: "8 min read",
