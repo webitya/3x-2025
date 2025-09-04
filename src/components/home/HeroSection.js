@@ -91,7 +91,7 @@ export default function HeroSection() {
           >
             <div className="relative mx-auto w-[300px] h-[300px] md:w-[340px] md:h-[340px] rounded-2xl overflow-hidden shadow-xl border border-white/30 bg-white/10 backdrop-blur-lg">
               <Image
-                src="/hero.jpeg" // Replace with your image
+                src="/hero.png" // Replace with your image
                 alt="B2B Growth"
                 fill
                 className="object-cover"
