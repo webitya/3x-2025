@@ -89,14 +89,14 @@ export default function HeroSection() {
               isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="relative mx-auto w-[300px] h-[300px] md:w-[340px] md:h-[340px] rounded-2xl overflow-hidden shadow-xl border border-white/30 bg-white/10 backdrop-blur-lg">
+            <div className="relative mx-auto w-[350px] h-[350px] md:w-[390px] md:h-[390px] rounded-2xl overflow-hidden shadow-xl border border-white/30 bg-white/10 backdrop-blur-lg">
               <Image
                 src="/hero.png" // Replace with your image
                 alt="B2B Growth"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div> */}
             </div>
           </div>
         </div>
