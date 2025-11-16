@@ -13,8 +13,8 @@ export default function RootLayout({ children }) {
         {children}
 
         {/* Partnership Badge */}
-        <div className="fixed bottom-3 left-3 z-50 flex flex-col items-center bg-yellow-50 backdrop-blur-sm px-2 py-2 rounded-md">
-          <imgv
+        <div className="fixed bottom-3 left-3 z-50 flex flex-col items-center bg-black/55 backdrop-blur-sm px-2 py-2 rounded-md">
+          <img
             src="/appolo.svg"
             alt="Partner Logo"
             className="w-6 md:w-8 mb-1"
